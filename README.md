@@ -2,11 +2,23 @@
 
 The website is developed using the Astro framework along with HTML, CSS, and JavaScript.
 
-## Astro Starter Kit: Basics
+## Development
 
-```
-npm create astro@latest -- --template basics
-```
+To run the website locally for development, follow these steps:
+
+1. Clone the GitHub repository: `git clone https://github.com/your-username/your-repo.git`
+2. Install the project dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open your web browser and visit `http://localhost:3000` to view the website locally.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- [Astro](https://astro.build/) - Web framework
+- [Vercel](https://vercel.com/) - Deployment platform
+
 
 ## 🚀 Project Structure
 
@@ -70,6 +82,11 @@ The navigation bar provides links to the following sections:
 
 - The contact us section includes a simple contact form with fields for name, email, and a message. Please note that the form doesn't need to be functional, i.e., it doesn't need to send real emails.
 
+## Astro Starter Kit: Basics
+
+```
+npm create astro@latest -- --template basics
+```
 
 ## 🧞 Commands
 
@@ -87,3 +104,25 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+## Deployment
+
+The website is deployed using [Vercel](https://vercel.com/) and automatically deployed whenever changes are pushed to the `main` branch on GitHub.
+
+### Deployment Steps
+
+To deploy the website on Vercel, follow these steps:
+
+1. Sign up for a Vercel account at [vercel.com](https://vercel.com/).
+2. Connect your GitHub account to Vercel.
+3. Create a new Vercel project and select the GitHub repository for your website.
+4. Configure the project settings, such as the branch to deploy (e.g., `main`) and the build command.
+5. Customize any additional deployment settings as needed.
+6. Click on the "Deploy" button to start the deployment process.
+
+Vercel will automatically build and deploy your website whenever changes are pushed to the specified branch on GitHub. You can view the deployment progress and access the live website URL from the Vercel dashboard.
+
+## Contributing
+
+If you'd like to contribute to the website, feel free to submit a pull request. Any contributions, bug fixes, or improvements are welcome.
