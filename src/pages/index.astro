@@ -1,129 +1,133 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 ---
+
 <Layout title="Home Page">
-  <main>
-    <section class="help-section">
-      <h2 class="text-center">FinEdge - The Investing Experts!</h2>
-      <div class="video-container">
-        <video muted autoplay controls loop>
-          <source src="https://www.finedge.in/assets/uploads/FinEdge_Invest.mp4" type="video/mp4">
-        </video>
-      </div>
-      <a href="https://www.finedge.in/#AskAnExpert" class="line-btn filled-btn">Start Investing</a>
-      <h2>A Wealth Creation Platform For</h2>
-    </section>
-
-    <div class="marquee-container">
-      <div class="marquee-content">
-        <marquee behavior="scroll" direction="up">
-          <p>Meeting Your Goals</p>
-          <p>Saving Taxes</p>
-          <p>Making Your Money Work For You</p>
-          <p>Attaining Financial Freedom</p>
-        </marquee>
-      </div>
-    </div>
-
-    <section class="why_choose_us">
-      <div class="container mb-3">
-        <div class="right-section">
-          <h2 class="text-center mt-3">Why Investing Goals are Important</h2>
-          <p>In the end, setting smart investing goals is what plays the biggest role in determining our investing success. Unfortunately, most of us end up chasing short-term returns during our investment planning journeys, leading to a poor experience. Instead, basing your investment plan on the foundation of investing goals can help you control and manage detrimental investing behaviors like greed and fear, thereby keeping you focused on the big picture instead of worrying about short-term fluctuations or trends.</p>
-          <p>Goal-based investing also helps you maintain a balanced approach towards your cash flows and savings, thereby ensuring that your key financial health ratios are in check. A goal plan acts as a roadmap towards a better financial future, ensuring reduced financial stress and a greatly enhanced investing journey.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="why_choose_us">
-      <div class="container mb-3">
-        <div class="right-section">
-          <h2 class="text-center mt-3">Why choose FinEdge?</h2>
-          <p>At FinEdge, we pioneered the "Bionic" investing model in India with the belief that technology should not replace people but empower them. We strongly believe that the human touch & the dedicated support of an Investment Manager (along with fantastic tech) are critical for enabling you to achieve your long-term financial goals.</p>
-          <p>All your investments through FinEdge will be linked to clearly defined goals. Your Investment Manager will help you avoid investing decisions that are based on greed and fear. Your experience with us will be seamless, convenient, and paperless. You will have the best tools to manage your progress towards your goals and ensure a best-in-class investment plan. Over time, we believe that your relationship with FinEdge will be one of trust and mutual respect – something very few platforms in the country can say today!</p>
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+    <main>
+        <section class="Home Page">
+            <section  class="help-section clearfix">
+                <br /><h2 class="text-center">FinEdge - The Investing Experts!</h2>
+                <div class="video-container">
+                    <video muted autoplay controls loop>
+                        <source src="https://www.finedge.in/assets/uploads/FinEdge_Invest.mp4" type="video/mp4">
+                    </video><br /> 
+                </div>
+                <a href="https://www.finedge.in/#AskAnExpert" class="line-btn filled-btn" data-toggle="modal" id="get_expert" style="top: 0rem;margin-bottom: 15px;">Start Investing</a>
+                <h2 style="color: #2cf; font-size: 38px;"> A Wealth Creation Platform For,</h2>
+            </section>
+            
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <marquee behavior="scroll" direction="up">
+                        <p>Meeting Your Goals</p>
+                        <p>Saving Taxes</p>
+                        <p>Making Your Money Work For You</p>
+                        <p>Attaining Financial Freedom</p>            
+                    </marquee>
+                </div>
+            </div>
+            <section class="why_choose_us">
+                <div class="container mb-3">
+                    <div class="col-xs-12 col-sm-12 col-md-12  right-section wow slideInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="text-center mt-3" data-wow-duration="1s" data-wow-delay="0.1s">Why Investing Goals are Important </h2>
+                        <p>In the end, setting smart investing goals is what plays the biggest role in determining our investing success. unfortunately, most of us end up chasing short term returns during our investment planning journeys, leading to a poor experience. Instead, basing your investment plan on the foundation of investing goals can help you control and manage detrimental investing behaviours like greed and fear, thereby keeping you focused on the big picture instead of worrying about short term fluctuations or trends. </p>
+                        <p>Goal based investing also helps you maintain a balanced approach towards your cash flows and savings, thereby ensuring that your key financial health ratios are in check. A goal plan acts as a roadmap towards a better financial future, ensuring reduced financial stress and a greatly enhanced investing journey.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="why_choose_us">
+                <div class="container mb-3">
+                    <div class="col-xs-12 col-sm-12 col-md-12  right-section wow slideInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="text-center mt-3">Why choose FinEdge? </h2>
+                        <p>At FinEdge, we pioneered the “Bionic” investing model in India with the belief that technology should not replace people but empower them. We strongly believe that the human touch & the dedicated support of an Investment Manager (along with fantastic tech) are critical for enabling you to achieve your long-term financial goals.</p>
+                        <p>All your investments through FinEdge will be linked to clearly defined goals. Your Investment Manager will help you avoid investing decisions that are based on greed and fear. Your experience with us will be seamless, convenient and paperless. You will have the best tools to manage your progress towards your goals and ensure a best-in-class investment plan. Over time, we believe that your relationship with FinEdge will be one of trust and mutual respect – something very few platforms in the country can say today! </p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</Layout> 
 
 <style>
-  .why_choose_us p,
-  .marquee-content p {
+  .why_choose_us p{
     font-size: 16px;
     font-weight: bold;
     line-height: 25px;
-    padding: 0 10%;
+    padding: 0 10% 0 10%;
     margin-top: 15px;
-    color: #fff;
+    color: #fff !important;
+    text-align: justify;
     text-align: center;
   }
-
   .marquee-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    overflow: hidden;
-  }
-
-  .marquee-content {
-    display: flex;
-    color: #fff;
-    font-weight: bold;
-    flex-direction: column;
-    justify-content: center;
-    animation: marqueeAnimation 10s linear infinite;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      overflow: hidden;
+ }
+ 
+ .marquee-content {
+      display: flex;
+      color: #fff;
+      font-weight: bold;
+      flex-direction: column;
+      justify-content: center;
+      animation: marqueeAnimation 10s linear infinite;
+ }
 
   @keyframes marqueeAnimation {
-    0% {
-      transform: translateY(0);
-    }
-    80% {
-      transform: translateY(-100%);
-    }
+      0% {
+          transform: translateY(0);
+      }
+      80% {
+          transform: translateY(-100%);
+      }
   }
-
-  .mb-3 {
+  .mb-3{
     margin-bottom: 3rem;
   }
-
-  .mt-3 {
+  .mt-3{
     margin-top: 3rem;
   }
-
-  .help-section h2,
-  .why_choose_us h2 {
-    color: #2cf;
+  .why_we_need,.help-section,.accordion h2{
+    color: #2cf808;
     font-size: 32px;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: capitalize !important;
     text-align: center;
     position: relative;
-    border-bottom: 0;
+    border-bottom: 0px solid #999 !important;
+  }
+  
+  .why_choose_us h2{
+      color: #2cf;
+      text-transform: capitalize !important;
+      text-align: center;
+      font-weight: bold !important;
+      position: relative;
+      border-bottom: 0px solid #999 !important;
   }
 
   .video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
   }
 
   video {
-    max-width: 100%;
-    max-height: 90%;
+      max-width: 100%;
+      max-height: 90%;
   }
 
-  .line-btn.filled-btn {
-    background: #267e24;
-    color: #fff;
-    border-radius: 5px;
-  }
 
+  .line-btn.filled-btn{
+      background: #267e24;
+      color: #fff;
+      border-radius: 5px;
+  }
   .line-btn.filled-btn:hover {
-    background: #d820a1;
+      background: #d820a1;
   }
 </style>
