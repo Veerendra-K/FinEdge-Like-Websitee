@@ -1,29 +1,27 @@
 <header class="header">
-    <div class="container">
-      <div class="logo">
-        <a href="/">
-          <img src="/assets/logo.png" alt="" />
-        </a>
-      </div>
-      <div class="headline">
-        <h1><span style="color: #f8fafc;">Welcome to</span>  FinEdge</h1>
-      </div>
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutUs">About Us</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contactUs">Contact Us</a></li>
-        </ul>
-      </nav>
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <img src="/assets/logo.png" alt="FinEdge Logo" />
+      </a>
     </div>
+    <div class="headline">
+      <h1><span class="highlight">Welcome to</span> FinEdge</h1>
+    </div>
+    <nav>
+      <input type="checkbox" id="toggle-nav">
+      <label for="toggle-nav" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="navigation">
+        <li><a href="/">Home</a></li>
+        <li><a href="/aboutUs">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contactUs">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-
-
 <style>
   .header {
     height: 80px;
@@ -34,7 +32,7 @@
   .header .container {
     height: 100%;
     display: flex;
-    align-items: right;
+    align-items: center;
     justify-content: space-between;
     padding: 0 20px;
   }
@@ -42,7 +40,6 @@
   .header img {
     height: 45px;
     vertical-align: middle;
-    padding: 0 100px;
     margin-top: 15px;
   }
 
@@ -59,10 +56,9 @@
     100% { color: #6b21a8; }
   }
 
-
   .header nav ul {
     display: flex;
-    float: right;
+    justify-content: flex-end;
     margin-right: 20px;
   }
 
@@ -79,12 +75,12 @@
     border-radius: 3px;
   }
 
-
-  a:hover{
+  a:hover {
     background: #1b9bff;
-    transition: .5s;
+    transition: 0.5s;
   }
-  .checkbtn{
+
+  .menu-btn {
     font-size: 30px;
     color: #6b21a8;
     float: right;
@@ -93,15 +89,17 @@
     cursor: pointer;
     display: none;
   }
-  #check{
+
+  #toggle-nav {
     display: none;
   }
 
-  @media (max-width: 858px){
-    .checkbtn{
+  @media (max-width: 858px) {
+    .menu-btn {
       display: block;
     }
-    ul{
+
+    .navigation {
       position: fixed;
       width: 80%;
       height: 100vh;
@@ -109,18 +107,51 @@
       top: 80px;
       left: -100%;
       text-align: center;
-      transition: all .5s;
+      transition: all 0.5s;
     }
-    nav ul li{
+
+    .navigation li {
       display: block;
       margin: 50px 0;
       line-height: 30px;
     }
-    nav ul li a{
+
+    .navigation li a {
       font-size: 20px;
     }
-    #check:checked ~ ul{
-      left: 0; 
+
+    #toggle-nav:checked ~ .navigation {
+      left: 0;
+    }
+    
+    .header.nav-open .menu-btn i {
+      transform: rotate(90deg);
+    }
+
+    .header.nav-open .navigation {
+      left: 0;
     }
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleNav = document.getElementById('toggle-nav') as HTMLInputElement | null;
+    const header = document.querySelector('.header') as HTMLElement | null;
+
+    if (toggleNav && header) {
+      toggleNav.addEventListener('change', function() {
+        header.classList.toggle('nav-open');
+      });
+
+      const navigationLinks = document.querySelectorAll('.navigation li a');
+      navigationLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (toggleNav.checked) {
+            toggleNav.checked = false;
+            header.classList.remove('nav-open');
+          }
+        });
+      });
+    }
+  });
+</script>
