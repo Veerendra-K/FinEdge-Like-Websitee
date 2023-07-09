@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Services Page">
+  <main>
+    <section>
+      <h2>Our Services</h2>
+      <div class="service">
+        <img src="/assets/money-transfer.png" alt="Individual Money Transfers" />
+        <h3>Individual Money Transfers</h3>
+        <p>Securely transfer money to your friends and family.</p>
+      </div>
+      <div class="service">
+        <img src="/assets/Online-Payments.png" alt="Business Payments" />
+        <h3>Business Payments</h3>
+        <p>Efficiently manage payments for your business transactions.</p>
+      </div>
+      <div class="service">
+        <img src="/assets/Real-time tracking.png" alt="Real-time Tracking" />
+        <h3>Real-time Tracking</h3>
+        <p>Track your payments in real-time and stay updated.</p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Overall layout */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section heading */
+h2 {
+  color: #2cf808;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Individual service */
+.service {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.service img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.service h3 {
+  color:#3af319;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color:gold;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+</style>
